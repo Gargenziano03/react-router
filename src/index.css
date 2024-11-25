@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --react-router-dark: black;
+    --react-router-light: white;
+    --react-router-accent: purple;
+}
+
+header {
+    background-color: var(--react-router-dark);
+    color: var(--react-router-light);
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    a {
+        text-decoration: none;
+        color: var(--react-router-light);
+        padding: 0.5rem;
+
+        &.active {
+            text-decoration: var(--react-router-accent);
+            color: var(--react-router-accent);
+        }
+    }
+}

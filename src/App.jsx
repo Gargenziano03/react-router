@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import DefaultLayout from './pages/DefaultLayout';
-import HomePage from './pages/Homepage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HomePage from './pages/Homepage'
 import ChiSiamo from './pages/ChiSiamo'
-import ListPost from './pages/ListPost';
+import ListPost from './pages/ListPost'
+import DefaultLayout from './pages/DefaultLayout'
 function App() {
   const [postsData, setPostsData] = useState({})
 
@@ -23,14 +23,6 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />}></Route>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/ChiSiamo' element={<ChiSiamo />} />
-          <Route path='/ListPost' element={<ListPost />} />
-        </Routes>
-      </BrowserRouter>
       {/*<button type='button' onClick={handleClick}>fetch posts</button>*/}
       <section className='posts'>
         <div className="container">
@@ -48,6 +40,16 @@ function App() {
           </div>
         </div>
       </section>
+
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/ChiSiamo' element={<ChiSiamo />} />
+            <Route path='/ListPost' element={<ListPost />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
