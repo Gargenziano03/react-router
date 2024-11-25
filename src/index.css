@@ -5,18 +5,19 @@
 }
 
 :root {
-    --react-router-dark: black;
+    --react-router-grey: rgb(124, 123, 123);
     --react-router-light: white;
-    --react-router-accent: purple;
+    --react-router-gold: rgb(115, 128, 0);
 }
 
 header {
-    background-color: var(--react-router-dark);
+    background-color: var(--react-router-grey);
     color: var(--react-router-light);
     padding: 0.75rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 nav {
@@ -26,8 +27,8 @@ nav {
         padding: 0.5rem;
 
         &.active {
-            text-decoration: var(--react-router-accent);
-            color: var(--react-router-accent);
+            text-decoration: var(--react-router-gold);
+            color: var(--react-router-gold);
         }
     }
 }
