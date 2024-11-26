@@ -4,7 +4,7 @@ export default function PostPage() {
 
     const [post, setPost] = useState(null)
     const { id } = useParams();
-    const url = `http://127.0.0.1:3000/ListPost/${id}`
+    const url = `http://127.0.0.1:3000/posts/${id}`
     console.log(url);
     useEffect(() => {
         fetch(url)
@@ -21,9 +21,15 @@ export default function PostPage() {
 
     return (
         <>
-            <h1>
-                post id: {id}
-            </h1>
+            {
+                post ? (
+                    <div>
+                        <img src={`http://127.0.0.1:3000/${post.image}`} alt="post" />
+                    </div>
+                ) : (
+                    <div>loading...</div>
+                )
+            }
         </>
     )
 }
