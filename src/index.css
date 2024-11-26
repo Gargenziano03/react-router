@@ -32,3 +32,8 @@ nav {
         }
     }
 }
+
+footer {
+    background-color: var(--react-router-grey);
+    padding: 2rem 0;
+}
