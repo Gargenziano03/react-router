@@ -11,6 +11,7 @@ export default function PostPage() {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                setPost(data)
             })
             .catch(err => {
                 console.log(err);
