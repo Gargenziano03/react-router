@@ -19,7 +19,7 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/ChiSiamo' element={<ChiSiamo />} />
             <Route path='/ListPost' element={<ListPost />} />
-            <Route path='/ListPost/id' element={<PostPage />} />
+            <Route path='/ListPost/:id' element={<PostPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

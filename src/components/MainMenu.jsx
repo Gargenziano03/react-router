@@ -4,7 +4,7 @@ export default function MainMenu() {
         <nav>
             <Link to="/">Home</Link>
             <NavLink to="/ChiSiamo">Info</NavLink>
-            <NavLink to="/ListPOst">List</NavLink>
+            <NavLink to="/ListPost">List</NavLink>
         </nav>
     )
 }
