@@ -9,8 +9,6 @@ import ListPost from './pages/ListPost'
 import PostPage from './pages/PostPage'
 
 function App() {
-
-
   return (
     <>
       <BrowserRouter>
